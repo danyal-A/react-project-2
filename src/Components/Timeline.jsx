@@ -111,7 +111,7 @@ export default function Timeline() {
           {posts.map((post) => (
             <li className="border shadow w-full px-6 py-6 mb-5" key={post.id}>
               <div className="flex justify-between items-center">
-                <h1 className="font-bold mb-3">User {}</h1>
+                <h1 className="text-3xl font-bold">User {post.userId}</h1>
                 {loginuser.id === post.userId ? (
                   <div>
                     <button
@@ -124,7 +124,7 @@ export default function Timeline() {
                     <Link
                       to={`/edit/${post.id}`}
                       type="button"
-                      class="border border-green-300 bg-green-300 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none focus:outline-none focus:shadow-outline"
+                      class="border border-green-300 no-underline text-white bg-green-300 rounded-md px-4 py-2 m-2 transition duration-500 ease select-none focus:outline-none focus:shadow-outline"
                     >
                       Edit
                     </Link>
@@ -137,8 +137,8 @@ export default function Timeline() {
               <br />
               {post.body}
               <div className="flex justify-between items-center mt-4">
-                <h2 className="font-bold">Comments</h2>
-                <button className="bg-green-300 rounded px-4 py-2" onClick={() => { setModal(true); setCommentId(post.id) }} >Add Comment</button>
+                <h2 className="text-3xl font-bold">Comments</h2>
+                <button className="bg-green-300 rounded px-4 py-2 hover:bg-green-400" onClick={() => { setModal(true); setCommentId(post.id) }} >Add Comment</button>
               </div>
               <div className="w-full">
                 {comments.length > 0 ? (

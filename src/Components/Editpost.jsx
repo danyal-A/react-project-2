@@ -54,7 +54,7 @@ export default function Editpost({ posts, setPosts }) {
 
                         <button
                         onClick={handleSaveChanges} 
-                        className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-blue-500"
+                        className="border rounded hover:bg-blue-600 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-blue-500"
                         >Save change</button>
                     </div>
                 </div>
